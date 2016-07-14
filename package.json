@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack -d --watch",
     "build": "webpack -p",
-    "build_h5": "webpack --watch --config webpack.index.config.js"
+    "build_tab": "webpack --watch --config webpack.tab.config.js"
   },
   "author": "",
   "license": "ISC",

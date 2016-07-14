@@ -54,10 +54,6 @@
 
 	var _reactDom = __webpack_require__(33);
 
-	var _drag = __webpack_require__(173);
-
-	var _drag2 = _interopRequireDefault(_drag);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66,78 +62,189 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var TabSwitch = function (_React$Component) {
-		_inherits(TabSwitch, _React$Component);
+	var Top = function (_React$Component) {
+		_inherits(Top, _React$Component);
 
-		function TabSwitch(props) {
-			_classCallCheck(this, TabSwitch);
+		function Top() {
+			_classCallCheck(this, Top);
 
-			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TabSwitch).call(this, props));
-
-			_this.tab = _this.tab.bind(_this);
-			_this.state = {
-				divStyle: {
-					border: 'solid #ccc 1px',
-					width: '200px',
-					height: '230px',
-					margin: '100px auto'
-				}
-			};
-			return _this;
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Top).apply(this, arguments));
 		}
 
-		_createClass(TabSwitch, [{
-			key: 'tab',
-			value: function tab(event) {
-				console.log(event);
-				if (event.target.tagName.toLowerCase() == 'input') {
-					for (var i = 0; i < this.refs.panel.childNodes.length; i++) {
-						this.refs.panel.childNodes[i].className = '';
-					}
-					this.refs.panel.childNodes[event.target.defaultValue - 1].className = 'ac';
-				}
-			}
-		}, {
+		_createClass(Top, [{
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ style: this.state.divStyle },
-					_react2.default.createElement(
-						'div',
-						{ ref: 'ctrl', id: 'ctrl', onClick: this.tab, style: { border: 'solid green 1px' } },
-						_react2.default.createElement('input', { type: 'button', value: '1' }),
-						_react2.default.createElement('input', { type: 'button', value: '2' }),
-						_react2.default.createElement('input', { type: 'button', value: '3' })
-					),
+					{ className: 'insert' },
 					_react2.default.createElement(
 						'ul',
-						{ ref: 'panel', id: 'panel' },
+						{ className: 'menu' },
 						_react2.default.createElement(
-							'li',
-							{ className: 'ac', style: { position: 'relative' } },
-							'!!!!',
-							_react2.default.createElement(_drag2.default, null)
+							'ol',
+							null,
+							_react2.default.createElement(
+								'button',
+								{ id: 'confirm', className: 'confirm' },
+								'确定'
+							),
+							_react2.default.createElement(
+								'button',
+								{ className: 'confirm' },
+								'预览'
+							),
+							_react2.default.createElement(
+								'button',
+								{ className: 'confirm' },
+								'案例'
+							),
+							_react2.default.createElement(
+								'button',
+								{ className: 'confirm' },
+								'生成页'
+							)
 						),
 						_react2.default.createElement(
 							'li',
-							{ className: '' },
-							'2222'
+							{ 'data-type': 'bj' },
+							_react2.default.createElement(
+								'span',
+								null,
+								'背景'
+							)
 						),
 						_react2.default.createElement(
 							'li',
-							{ className: '' },
-							'3333'
+							{ 'data-type': 'img' },
+							_react2.default.createElement(
+								'span',
+								null,
+								'图片'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							{ 'data-type': 'text' },
+							_react2.default.createElement(
+								'span',
+								null,
+								'文本'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							{ 'data-type': 'button' },
+							_react2.default.createElement(
+								'span',
+								null,
+								'按钮'
+							)
 						)
 					)
 				);
 			}
 		}]);
 
-		return TabSwitch;
+		return Top;
 	}(_react2.default.Component);
 
-	(0, _reactDom.render)(_react2.default.createElement(TabSwitch, null), document.getElementById('tab'));
+	var Box = function (_React$Component2) {
+		_inherits(Box, _React$Component2);
+
+		function Box() {
+			_classCallCheck(this, Box);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Box).apply(this, arguments));
+		}
+
+		_createClass(Box, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ style: { display: 'flex', height: '91%', width: '98%', margin: '1% auto' } },
+					_react2.default.createElement(
+						'ul',
+						{ className: 'cont list' },
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement(
+								'span',
+								null,
+								'111'
+							)
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							_react2.default.createElement('span', null)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'cont main' },
+						_react2.default.createElement('div', { className: 'config' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'phone' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'phoneTit' },
+								_react2.default.createElement(
+									'span',
+									null,
+									'设置'
+								),
+								_react2.default.createElement(
+									'font',
+									null,
+									'标题'
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'phoneBox swiper-container' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'swiper-wrapper' },
+									_react2.default.createElement('div', { className: 'swiper-slide' })
+								)
+							)
+						),
+						_react2.default.createElement('div', { id: 'panel', className: 'config' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'cont page' },
+						_react2.default.createElement(
+							'ul',
+							null,
+							_react2.default.createElement(
+								'li',
+								null,
+								'第一页'
+							)
+						),
+						_react2.default.createElement(
+							'ul',
+							null,
+							_react2.default.createElement(
+								'li',
+								{ className: 'addPage' },
+								'添加一页'
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Box;
+	}(_react2.default.Component);
+
+	(0, _reactDom.render)(_react2.default.createElement(Top, null), document.getElementById('top'));
+	(0, _reactDom.render)(_react2.default.createElement(Box, null), document.getElementById('box'));
 
 /***/ },
 /* 1 */
@@ -21170,85 +21277,6 @@
 	var ReactMount = __webpack_require__(164);
 
 	module.exports = ReactMount.renderSubtreeIntoContainer;
-
-/***/ },
-/* 172 */,
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Drag = function (_React$Component) {
-		_inherits(Drag, _React$Component);
-
-		function Drag(props) {
-			_classCallCheck(this, Drag);
-
-			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Drag).call(this, props));
-
-			_this.drag = _this.drag.bind(_this);
-			_this.state = {
-				divStyle: {
-					height: '100px',
-					width: '100px',
-					border: 'solid yellow 2px',
-					position: 'absolute'
-				}
-			};
-			return _this;
-		}
-
-		_createClass(Drag, [{
-			key: 'drag',
-			value: function drag(ev) {
-				var oDiv = this.refs.dragDiv; //ev.target;
-				// ev.cancelBubble = true;
-				// debugger;
-				var disX = ev.clientX - oDiv.offsetLeft;
-				var disY = ev.clientY - oDiv.offsetTop;
-
-				document.onmousemove = function (ev) {
-					var l = ev.clientX - disX;
-					var t = ev.clientY - disY;
-					oDiv.style.left = l + 'px';
-					oDiv.style.top = t + 'px';
-				};
-				document.onmouseup = function (ev) {
-					console.log("X:" + oDiv.offsetLeft + "--- ----" + "Y:" + oDiv.offsetTop);
-					document.onmousemove = null;
-					document.onmouseup = null;
-				};
-				return false;
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement('div', { ref: 'dragDiv', style: this.state.divStyle, onMouseDown: this.drag });
-			}
-		}]);
-
-		return Drag;
-	}(_react2.default.Component);
-
-	exports.default = Drag;
 
 /***/ }
 /******/ ]);
